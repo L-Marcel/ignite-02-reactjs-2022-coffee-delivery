@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .purple-icon {
+    & > svg {
+      @apply text-purple-default;
+    }
+
+    &:not(.keep-icon-color):hover svg {
+      @apply text-purple-dark;
+    }
+  }
+
+  .remove-button {
+    @apply
+      text-base-text 
+      purple-icon
+      hover:text-base-subtitle
+      text-xs
+      leading-[1.4rem]
+      gap-1
+      bg-base-button
+      hover:bg-base-hover
+      py-0
+      h-8;
+  }
+}
