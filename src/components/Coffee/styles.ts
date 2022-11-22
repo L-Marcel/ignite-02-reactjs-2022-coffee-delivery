@@ -12,6 +12,7 @@ export const CoffeeCardContainer = tw.article`
   flex-col
   items-center
   p-5
+  mx-1
 `;
 
 export const CoffeeTagsContainer = tw.ul`
@@ -66,6 +67,7 @@ export const CoffeeCardFooterContainer = tw.footer`
 `;
 
 export const CoffeeCardFooterPrice = tw.p`
+  text-base-text
   font-roboto
   font-normal
   text-sm
@@ -73,8 +75,35 @@ export const CoffeeCardFooterPrice = tw.p`
 `;
 
 export const CoffeeCardFooterPriceValue = tw.span`
+  text-base-text
   font-baloo
   font-extrabold
   text-2xl
   leading-[1.9375rem]
+`;
+
+export const CoffeeCartItemContainer = tw.article`
+  px-1
+  py-2
+  bg-base-card
+  flex
+  flex-row
+  justify-between
+  h-20
+`;
+
+export const CoffeeCartItemTitle = tw.h4`
+  font-normal
+  font-roboto
+  text-base
+  text-base-subtitle
+  leading-[1.3rem]
+`;
+
+export const CoffeeCartItemPrice = tw.p`
+  font-bold
+  font-roboto
+  text-base
+  text-base-text
+  leading-[1.3rem]
 `;

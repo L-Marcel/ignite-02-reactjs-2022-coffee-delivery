@@ -1,6 +1,6 @@
 "use client";
 
-import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus } from "phosphor-react";
+import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus, MapPin } from "phosphor-react";
 
 const icons = {
   ShoppingCart: (props: IconProps) => <ShoppingCart
@@ -32,6 +32,12 @@ const icons = {
   Minus: (props: IconProps) => <Minus
     width="1.375rem"
     height="1.375rem"
+    {...props}
+  />,
+  MapPin: (props: IconProps) => <MapPin
+    width="1.375rem"
+    height="1.375rem"
+    weight="fill"
     {...props}
   />,
 };

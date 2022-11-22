@@ -7,6 +7,10 @@ export interface CounterProps {
 export function Counter({
   count = 0
 }: CounterProps) {
+  if(count === 0) {
+    return null;
+  }
+
   return (
     <CounterContainer>
       {count}

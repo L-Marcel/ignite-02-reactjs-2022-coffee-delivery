@@ -1,7 +1,7 @@
 import tw from "tw-tailwind";
 
 interface SelectContainerProps {
-  isSelected?: boolean;
+  selected?: boolean;
 }
 
 
@@ -22,5 +22,5 @@ export const SelectContainer = tw.button<SelectContainerProps>`
   transition-colors
   purple-icon
   keep-icon-color
-  ${props => props.isSelected? "bg-purple-light hover:bg-purple-light outline outline-1 outline-purple-default":"hover:bg-base-hover"}
+  ${props => props.selected? "bg-purple-light hover:bg-purple-light outline outline-1 outline-purple-default":"hover:bg-base-hover"}
 `;

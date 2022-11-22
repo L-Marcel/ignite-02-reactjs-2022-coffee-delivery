@@ -20,7 +20,7 @@ export function Select({
 
   return (
     <SelectContainer
-      isSelected={isSelected}
+      selected={isSelected}
       onClick={handleOnChangeIsSelected}
     >
       {icon}

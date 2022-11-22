@@ -1,8 +1,9 @@
+import { HTMLAttributes } from "react";
 import { IconButton } from "../Button/IconButton";
 import { Icon } from "../Icon";
 import { InputNumberContainer } from "./styles";
 
-interface InputNumberProps {
+interface InputNumberProps extends HTMLAttributes<HTMLDivElement> {
   value: number;
   onIncrement: (returnMin: (value: number) => number) => void;
   onDecrement: (returnMax: (value: number) => number) => void;
@@ -15,7 +16,8 @@ export function InputNumber({
   onDecrement,
   value = 1,
   min = 1,
-  max
+  max,
+  ...props
 }: InputNumberProps) {
   function returnMax(value: number) {
     if(max === undefined || (max >= (value + 1))) {
@@ -42,7 +44,7 @@ export function InputNumber({
   }
 
   return (
-    <InputNumberContainer>
+    <InputNumberContainer {...props}>
       <IconButton
         onClick={handleDecrement}
         theme="transparent"

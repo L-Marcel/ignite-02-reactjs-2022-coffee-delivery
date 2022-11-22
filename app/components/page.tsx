@@ -1,15 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../src/components/Button";
-import { IconButton } from "../src/components/Button/IconButton";
-import { CoffeeCard } from "../src/components/Coffee/CoffeeCard";
-import { CoffeeCartItem } from "../src/components/Coffee/CoffeeCartItem";
-import { Counter } from "../src/components/Counter";
-import { Icon } from "../src/components/Icon";
-import { Select } from "../src/components/Select";
+import { useForm } from "react-hook-form";
+import { Button } from "../../src/components/Button";
+import { IconButton } from "../../src/components/Button/IconButton";
+import { CoffeeCard } from "../../src/components/Coffee/CoffeeCard";
+import { CoffeeCartItem } from "../../src/components/Coffee/CoffeeCartItem";
+import { Counter } from "../../src/components/Counter";
+import { Icon } from "../../src/components/Icon";
+import { Input } from "../../src/components/Input";
+import { Select } from "../../src/components/Select";
 
 export default function HomePage() {
+  const { register } = useForm();
+
   const [isSelected, setIsSelected] = useState(false);
 
   function handleOnChangeIsSelected() {
@@ -23,13 +27,7 @@ export default function HomePage() {
         theme="yellow"
         icon={<Icon name="ShoppingCart"/>}
       />
-      <IconButton
-        theme="yellow"
-        counter={<Counter
-          count={3}
-        />}
-        icon={<Icon name="ShoppingCart"/>}
-      />
+ 
       <IconButton
         theme="yellow"
         counter={<Counter
@@ -44,6 +42,9 @@ export default function HomePage() {
       >
         CARTÃO DE CRÉDITO
       </Select>
+      <Input
+        register={register("name")}
+      />
       <CoffeeCard/>
       <CoffeeCartItem/>
     </div>
