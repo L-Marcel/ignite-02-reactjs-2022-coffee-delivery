@@ -26,4 +26,14 @@
       py-0
       h-8;
   }
+
+  .input-number-button {
+    @apply
+      purple-icon
+      h-4
+      min-h-[1rem];
+
+    @apply
+      min-w-[1rem] p-0 #{!important};
+  }
 }

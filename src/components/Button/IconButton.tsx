@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { ButtonProps } from ".";
 import { IconButtonContainer } from "./styles";
 
-export type IconButtonTheme = "purple" | "yellow" | "gray";
+export type IconButtonTheme = "purple" | "yellow" | "gray" | "transparent";
 
 export interface IconButtonProps extends ButtonProps {
   icon: ReactNode;

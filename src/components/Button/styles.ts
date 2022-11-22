@@ -33,5 +33,6 @@ export const IconButtonContainer = tw.button<IconButtonContainerProps>`
   ${props => props.theme === "purple"? 
     "text-base-card bg-purple-dark hover:bg-purple-default":
     props.theme === "yellow"? "text-yellow-dark bg-yellow-light":
-      props.theme === "gray"? "remove-button":""}
+      props.theme === "gray"? "remove-button":
+        props.theme === "transparent"? "input-number-button":""}
 `;

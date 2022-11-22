@@ -6,13 +6,23 @@ import { Button } from "../src/components/Button";
 import { IconButton } from "../src/components/Button/IconButton";
 import { Counter } from "../src/components/Counter";
 import { Icon } from "../src/components/Icon";
+import { InputNumber } from "../src/components/Input/InputNumber";
 import { Select } from "../src/components/Select";
 
 export default function HomePage() {
+  const [amount, setAmount] = useState(1);
   const [isSelected, setIsSelected] = useState(false);
 
   function handleOnChangeIsSelected() {
     setIsSelected(isSelected => !isSelected);
+  }
+
+  function handleOnIncrementAmount(returnMax: (amount: number) => number) {
+    setAmount(amount => returnMax(amount + 1));
+  }
+
+  function handleOnDecrementAmount(returnMin: (amount: number) => number) {
+    setAmount(amount => returnMin(amount - 1));
   }
 
   return (
@@ -56,6 +66,11 @@ export default function HomePage() {
       >
         CARTÃO DE CRÉDITO
       </Select>
+      <InputNumber
+        value={amount}
+        onIncrement={handleOnIncrementAmount}
+        onDecrement={handleOnDecrementAmount}
+      />
     </div>
   );
 }
