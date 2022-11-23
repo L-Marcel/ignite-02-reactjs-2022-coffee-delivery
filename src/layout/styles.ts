@@ -8,5 +8,4 @@ export const AppBody = tw.body`
   flex-1
   gap-4
   justify-center
-  items-center
 `;

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Coffee } from "../../constants/coffees";
+import { useCart } from "../../context/hooks/useCart";
 import { IconButton } from "../Button/IconButton";
 import { Icon } from "../Icon";
 import { InputNumber } from "../Input/InputNumber";
@@ -6,9 +8,11 @@ import { CoffeeCardFooterContainer, CoffeeCardFooterPrice, CoffeeCardFooterPrice
 
 interface CoffeeCardFooter {
   price: number;
+  coffee: Coffee;
 }
 
-export function CoffeeCardFooter({ price }: CoffeeCardFooter) {
+export function CoffeeCardFooter({ price, coffee }: CoffeeCardFooter) {
+  const { addCoffeeAmount } = useCart();
   const [amount, setAmount] = useState(1);
 
   function handleOnIncrementAmount(returnMax: (amount: number) => number) {
@@ -17,6 +21,10 @@ export function CoffeeCardFooter({ price }: CoffeeCardFooter) {
 
   function handleOnDecrementAmount(returnMin: (amount: number) => number) {
     setAmount(amount => returnMin(amount - 1));
+  }
+
+  function handleAddCoffeeAmount() {
+    addCoffeeAmount(coffee, amount);
   }
   
   const [, value] = new Intl.NumberFormat("pt-BR", {
@@ -37,6 +45,7 @@ export function CoffeeCardFooter({ price }: CoffeeCardFooter) {
         />
         <IconButton
           icon={<Icon name="ShoppingCartSimple"/>}
+          onClick={handleAddCoffeeAmount}
         />
       </div>
     </CoffeeCardFooterContainer>

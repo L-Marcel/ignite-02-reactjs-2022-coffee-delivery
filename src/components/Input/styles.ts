@@ -22,7 +22,7 @@ export const InputContainer = tw.input`
   text-base-text
   placeholder:text-base-label
   bg-base-input
-  border-2
+  border-[1px]
   border-base-button
   active:border-yellow-dark
   focus-visible:outline-none

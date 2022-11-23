@@ -1,7 +1,7 @@
 import tw from "tw-tailwind";
 
 export const HeaderContainer = tw.header`
-  px-40
+  px-20
   py-8
   flex
   flex-row

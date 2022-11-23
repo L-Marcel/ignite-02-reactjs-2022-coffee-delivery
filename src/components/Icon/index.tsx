@@ -1,6 +1,4 @@
-"use client";
-
-import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus, MapPin } from "phosphor-react";
+import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus, MapPin, Timer, Coffee, Package } from "phosphor-react";
 
 const icons = {
   ShoppingCart: (props: IconProps) => <ShoppingCart
@@ -35,6 +33,24 @@ const icons = {
     {...props}
   />,
   MapPin: (props: IconProps) => <MapPin
+    width="1.375rem"
+    height="1.375rem"
+    weight="fill"
+    {...props}
+  />,
+  Timer: (props: IconProps) => <Timer
+    width="1.375rem"
+    height="1.375rem"
+    weight="fill"
+    {...props}
+  />,
+  Coffee: (props: IconProps) => <Coffee
+    width="1.375rem"
+    height="1.375rem"
+    weight="fill"
+    {...props}
+  />,
+  Package: (props: IconProps) => <Package
     width="1.375rem"
     height="1.375rem"
     weight="fill"

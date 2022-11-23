@@ -1,10 +1,18 @@
 import Image from "next/image";
+import Router from "next/router";
+import { useCart } from "../../context/hooks/useCart";
 import { IconButton } from "../Button/IconButton";
 import { Counter } from "../Counter";
 import { Icon } from "../Icon";
 import { HeaderContainer, HeaderLocation, HeaderLocationText } from "./styles";
 
 export function Header() {
+  const { coffeesAmount } = useCart();
+
+  function handleNavigateToCheckout() {
+    Router.push("/checkout");
+  }
+
   return (
     <HeaderContainer>
       <Image
@@ -23,9 +31,10 @@ export function Header() {
         <IconButton
           theme="yellow"
           counter={<Counter
-            count={0}
+            count={coffeesAmount}
           />}
           icon={<Icon name="ShoppingCart"/>}
+          onClick={handleNavigateToCheckout}
         />
       </div>
     </HeaderContainer>

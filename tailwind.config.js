@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        baloo: ["var(--baloo-font)", "sans-serif"],
-        roboto: ["var(--roboto-font)", "sans-serif"]
+        baloo: ["'Baloo 2'", "cursive"],
+        roboto: ["'Roboto'", "sans-serif"]
       }
     },
     colors: {
