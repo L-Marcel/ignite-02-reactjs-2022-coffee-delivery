@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         baloo: ["'Baloo 2'", "cursive"],
         roboto: ["'Roboto'", "sans-serif"]
+      },
+      gridTemplateColumns: {
+        "checkout-form": "20fr 28fr 6fr",
       }
     },
     colors: {

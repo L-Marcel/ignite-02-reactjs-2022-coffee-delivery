@@ -3,15 +3,21 @@ import { InputContainer, InputLabelContainer, InputLabelRightMessage } from "./s
 
 interface InputProps {
   register: UseFormRegisterReturn;
+  required?: boolean;
+  placeholder?: string;
+  labelClassName?: string;
 }
 
 export function Input({
-  register
+  register,
+  required = true,
+  placeholder,
+  labelClassName
 }: InputProps) {
   return (
-    <InputLabelContainer>
-      <InputContainer placeholder="Label" {...register}/>
-      { !register.required && <InputLabelRightMessage>Optional</InputLabelRightMessage> }
+    <InputLabelContainer className={labelClassName}>
+      <InputContainer placeholder={placeholder} {...register}/>
+      { !required && <InputLabelRightMessage>Optional</InputLabelRightMessage> }
     </InputLabelContainer>
   );
 }

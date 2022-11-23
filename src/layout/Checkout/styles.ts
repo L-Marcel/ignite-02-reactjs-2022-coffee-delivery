@@ -21,3 +21,15 @@ export const CheckoutSectionTitle = tw.legend`
   leading-[1.4375rem]
   text-base-subtitle
 `;
+
+export const CheckoutFieldTitle = tw.h4`
+  font-baloo
+  font-bold
+  text-lg
+  leading-[1.4375rem]
+  text-base-subtitle
+`;
+
+export const CheckoutFieldSubtitle = tw.p`
+
+`;
