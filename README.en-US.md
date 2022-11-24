@@ -10,6 +10,10 @@
     <a class="navigation-link" href="https://ignite-02-reactjs-2022-coffee-delivery.vercel.app/" target="__blank__">
       demo
     </a>
+    <span>•</span>
+    <a class="navigation-link" href="https://www.figma.com/file/1BlIf8huFKKwEdlgP9smMU/Coffee-Delivery-(Copy)?node-id=0%3A1&t=shWBBgLs9jm7AckQ-1" target="__blank__">
+      figma
+    </a>
   </nav>
 </div>
 
