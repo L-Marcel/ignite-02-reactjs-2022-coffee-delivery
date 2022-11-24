@@ -1,9 +1,9 @@
-import { HTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 import { IconButton } from "../Button/IconButton";
 import { Icon } from "../Icon";
 import { InputNumberContainer } from "./styles";
 
-interface InputNumberProps extends HTMLAttributes<HTMLDivElement> {
+interface InputNumberProps extends InputHTMLAttributes<HTMLDivElement> {
   value: number;
   onIncrement: (returnMin: (value: number) => number) => void;
   onDecrement: (returnMax: (value: number) => number) => void;

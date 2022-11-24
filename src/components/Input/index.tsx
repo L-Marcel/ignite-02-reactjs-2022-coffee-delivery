@@ -6,6 +6,7 @@ interface InputProps {
   required?: boolean;
   placeholder?: string;
   labelClassName?: string;
+  pattern?: string;
 }
 
 export function Input({

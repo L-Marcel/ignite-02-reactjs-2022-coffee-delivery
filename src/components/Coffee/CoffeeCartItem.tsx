@@ -1,22 +1,33 @@
 import { useState } from "react";
-import { coffees } from "../../constants/coffees";
+import { Coffee, coffees } from "../../constants/coffees";
+import { useCart } from "../../context/hooks/useCart";
 import { IconButton } from "../Button/IconButton";
 import { Icon } from "../Icon";
 import { InputNumber } from "../Input/InputNumber";
 import { CoffeeImage } from "./CoffeeImage";
 import { CoffeeCartItemContainer, CoffeeCartItemPrice, CoffeeCartItemTitle } from "./styles";
 
-export function CoffeeCartItem() {
-  const { src, title, price } = coffees["Americano"];
+interface CoffeeCartItemProps {
+  coffee: Coffee;
+}
 
-  const [amount, setAmount] = useState(1);
+
+export function CoffeeCartItem({ coffee }: CoffeeCartItemProps) {
+  const { coffees: coffeesInCart, removeCoffee, setCoffeeAmount } = useCart();
+
+  const { price, title, src } = coffees[coffee];
+  const amount = coffeesInCart[coffee];
 
   function handleOnIncrementAmount(returnMax: (amount: number) => number) {
-    setAmount(amount => returnMax(amount + 1));
+    setCoffeeAmount(coffee, returnMax(amount + 1));
   }
 
   function handleOnDecrementAmount(returnMin: (amount: number) => number) {
-    setAmount(amount => returnMin(amount - 1));
+    setCoffeeAmount(coffee, returnMin(amount - 1));
+  }
+
+  function handleOnRemoveCoffee() {
+    removeCoffee(coffee);
   }
   
   const value = new Intl.NumberFormat("pt-BR", {
@@ -48,6 +59,7 @@ export function CoffeeCartItem() {
                 width="1.175rem"
                 height="1.175rem"
               />}
+              onClick={handleOnRemoveCoffee}
             >
               REMOVER
             </IconButton>

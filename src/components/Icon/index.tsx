@@ -1,4 +1,4 @@
-import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus, MapPin, Timer, Coffee, Package } from "phosphor-react";
+import { CreditCard, IconProps, ShoppingCart, ShoppingCartSimple, Trash, Plus, Minus, MapPin, Timer, Coffee, Package, Bank, Money, CurrencyDollar, IconWeight, MapPinLine } from "phosphor-react";
 
 const icons = {
   ShoppingCart: (props: IconProps) => <ShoppingCart
@@ -38,6 +38,11 @@ const icons = {
     weight="fill"
     {...props}
   />,
+  MapPinLine: (props: IconProps) => <MapPinLine
+    width="1.375rem"
+    height="1.375rem"
+    {...props}
+  />,
   Timer: (props: IconProps) => <Timer
     width="1.375rem"
     height="1.375rem"
@@ -56,12 +61,29 @@ const icons = {
     weight="fill"
     {...props}
   />,
+  Bank: (props: IconProps) => <Bank
+    width="1.375rem"
+    height="1.375rem"
+    {...props}
+  />,
+  Money: (props: IconProps) => <Money
+    width="1.375rem"
+    height="1.375rem"
+    {...props}
+  />,
+  CurrencyDollar: (props: IconProps) => <CurrencyDollar
+    width="1.375rem"
+    height="1.375rem"
+    {...props}
+  />
 };
 
 type ClientIconType = {
   name: keyof typeof icons;
   width?: string;
   height?: string;
+  weight?: IconWeight;
+  className?: string;
 };
 
 export function Icon({ name, ...props }: ClientIconType) {

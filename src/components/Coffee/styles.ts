@@ -107,3 +107,10 @@ export const CoffeeCartItemPrice = tw.p`
   text-base-text
   leading-[1.3rem]
 `;
+
+export const CoffeeCartListPriceItem = tw.li`
+  flex
+  flex-row
+  justify-between
+  coffee-cart-list-price-item
+`;

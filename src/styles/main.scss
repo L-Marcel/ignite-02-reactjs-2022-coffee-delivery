@@ -36,4 +36,15 @@
     @apply
       min-w-[1rem] p-0 #{!important};
   }
+
+  .coffee-cart-list-price-item {
+    @apply
+      font-roboto
+      font-normal
+      text-sm
+      text-base-text
+      last-of-type:font-bold
+      last-of-type:text-xl
+      last-of-type:text-base-subtitle
+  }
 }

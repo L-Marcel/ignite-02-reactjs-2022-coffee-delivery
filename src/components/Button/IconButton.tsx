@@ -15,11 +15,13 @@ export function IconButton({
   theme = "purple",
   counter,
   children,
+  type = "button",
   ...rest
 }: IconButtonProps) {
   return (
     <IconButtonContainer
       theme={theme}
+      type={type}
       {...rest}
     >
       {icon}

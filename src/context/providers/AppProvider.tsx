@@ -1,4 +1,6 @@
+import Router from "next/router";
 import { ReactNode, useCallback, useReducer } from "react";
+import { FieldValues } from "react-hook-form";
 import { createContext } from "use-context-selector";
 import { Coffee } from "../../constants/coffees";
 import { CartReducer } from "../reducers/CartReducer";
@@ -18,6 +20,7 @@ type AppContext = {
   addCoffeeAmount: (coffee: Coffee, amount: number) => void;
   setCoffeeAmount: (coffee: Coffee, amount: number) => void;
   removeCoffee: (coffee: Coffee) => void;
+  onConfirmPurchase: (selectedPaymentMethod: number) => (data: FieldValues) => void;
 };
 
 export const appContext = createContext({} as AppContext);
@@ -41,14 +44,33 @@ export function AppProvider({ children }: AppProviderProps) {
     dispatch(CartReducer.removeCoffeeAction(coffee));
   }, [dispatch]);
 
-  console.log(cart);
+  const onConfirmPurchase = useCallback((selectedPaymentMethod: number) => {
+    return (data: FieldValues) => {
+      if(selectedPaymentMethod < 0) {
+        return;
+      }
+
+      const paymentMethods = ["Cartão de Crédito", "Cartão de Débito", "Dinheiro"];
+      
+      //Eu poderia passar as informações do carrinh aqui, mas como não vai ser usado mesmo, resolvi tirar
+      Router.push({ 
+        pathname: "/success",
+        query: { 
+          ...data,
+          paymentMethod: paymentMethods[selectedPaymentMethod],
+        }
+      });
+    };
+  }, []);
+
   return (
     <appContext.Provider
       value={{
         cart,
         addCoffeeAmount,
         setCoffeeAmount,
-        removeCoffee
+        removeCoffee,
+        onConfirmPurchase
       }}
     >
       {children}

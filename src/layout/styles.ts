@@ -7,5 +7,4 @@ export const AppBody = tw.body`
   min-h-screen
   flex-1
   gap-4
-  justify-center
 `;

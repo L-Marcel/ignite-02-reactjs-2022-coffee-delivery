@@ -13,6 +13,10 @@ export function Header() {
     Router.push("/checkout");
   }
 
+  function handleNavigateToHome() {
+    Router.push("/");
+  }
+
   return (
     <HeaderContainer>
       <Image
@@ -20,6 +24,8 @@ export function Header() {
         alt="Um copo de café com o desenho de um foguete, do seu lado está escrito 'Coffee Delivery'"
         height={40}
         width={85}
+        onClick={handleNavigateToHome}
+        className="cursor-pointer"
       />
       <div className="flex flex-row gap-3">
         <HeaderLocation>
