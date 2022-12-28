@@ -22,7 +22,7 @@
 <div id="grid">
   <div id="grid-item">
     <h2>What did I <span>do</span>?</h2>
-    <p>I developed an application to manage a shopping cart for a fictional coffee shop, which contains the following functionalities:</p>
+    <p>I developed an application to manage a shopping cart for a fictional coffee shop, which contains the following features:</p>
     <ul>
       <li id="checked"><p>List of products (coffees) available for purchase;</p></li>
       <li id="checked"><p>Add a specific quantity of items to the cart;</p></li>
