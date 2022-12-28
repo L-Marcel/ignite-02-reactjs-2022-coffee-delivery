@@ -3,7 +3,7 @@
   <p>Um dos desafios da trilha de 2022 de React.js do Ignite</p>
   <nav>
     <div id="repository-buttons"/>
-    <a class="navigation-link disabled" href="https://github.com/L-Marcel/ignite-02-reactjs-2022-coffee-delivery/blob/main/README.en-us.md" target="__blank__">
+    <a class="navigation-link disabled" href="https://github.com/L-Marcel/ignite-02-reactjs-2022-coffee-delivery/blob/main/README.en-US.md" target="__blank__">
       en-us
     </a>
     <span class="disabled">•</span>
@@ -22,7 +22,7 @@
 <div id="grid">
   <div id="grid-item">
     <h2>O que <span>fiz</span>?</h2>
-    <p>Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:</p>
+    <p>Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia. Contém as seguintes funcionalidades:</p>
     <ul>
       <li id="checked"><p>Listagem de produtos (cafés) disponíveis para compra;</p></li>
       <li id="checked"><p>Adicionar uma quantidade específica de itens no carrinho;</p></li>
