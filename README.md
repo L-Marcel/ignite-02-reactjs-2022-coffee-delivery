@@ -22,7 +22,7 @@
 <div id="grid">
   <div id="grid-item">
     <h2>O que <span>fiz</span>?</h2>
-    <p>Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia. Contém as seguintes funcionalidades:</p>
+    <p>Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, a qual contém as seguintes funcionalidades:</p>
     <ul>
       <li id="checked"><p>Listagem de produtos (cafés) disponíveis para compra;</p></li>
       <li id="checked"><p>Adicionar uma quantidade específica de itens no carrinho;</p></li>
